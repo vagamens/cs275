@@ -72,4 +72,6 @@ insert into `cs275`.`users` (`computer`, `role`, `userName`, `password`, `contac
 		   (1, select `id` from `cs275`.`computers` where `serial` == '2ua4161ljl',
 		   	select `id` from `cs275`.`roles` where `name` == 'IT', 'kclay',
 		   	'adfg5ightopi3850as', select `id` from `cs275`.`contacts` where `fname` == 'Kevin',
- 			'Unix Administrator', 'Information Technology', 11111),
+ 			'Unix Administrator', 'Information Technology', 11111)
+
+select * from `cs275`.`users` left join (`computer`) ON (`users`.`computer`=`computers`.`id`)
